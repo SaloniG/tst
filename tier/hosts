@@ -1,0 +1,31 @@
+[appdbs]
+13.251.14.173
+[apps]
+52.220.235.75
+13.251.13.72
+[frontends]
+52.76.188.166 
+[frontends]
+## These are the frontends
+frontend1.ad0e.internal ansible_ssh_host=frontend1.ad0e.example.opentlc.com
+
+[apps]
+## These are the apps
+app1.ad0e.internal ansible_ssh_host=app1.ad0e.example.opentlc.com
+app2.ad0e.internal ansible_ssh_host=app2.ad0e.example.opentlc.com
+
+[appdbs]
+## These are the appdbs
+appdb1.ad0e.internal ansible_ssh_host=appdb1.ad0e.example.opentlc.com
+
+## These are the support
+[support]
+support1.ad0e.internal ansible_ssh_host=support1.ad0e.example.opentlc.com
+
+[appdbs:children]  
+tag_AnsibleGroup_appdbs  
+[apps:children]  
+tag_AnsibleGroup_apps  
+[frontends:children]  
+tag_AnsibleGroup_frontends  
+
