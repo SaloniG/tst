@@ -5,9 +5,9 @@
    # - name: fetch_info 
 # Setup front-end load balancer tier  
 - name: setup load-balancer tier 
-  hosts: 52.76.188.166
+  hosts: frontends
   become: yes 
-  roles: 
+  roles: apps
     - {name: base-config, tags: base-config} 
     - {name: lb-tier, tags: [lbs, haproxy]} 
  
@@ -25,7 +25,7 @@
 # Setup database tier  
 - name: setup database tier 
   become: yes 
-  hosts: 13.251.14.173 
+  hosts: appdbs
   roles: 
     - {name: base-config, tags: base-config} 
     - {name: postgresql, tags: [dbs, postgres]} 
