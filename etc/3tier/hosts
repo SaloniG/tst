@@ -1,0 +1,15 @@
+[appdbs]
+13.251.14.173
+[apps]
+52.220.235.75
+13.251.13.72
+[frontends]
+52.76.188.166 
+
+[appdbs:children]  
+tag_AnsibleGroup_appdbs  
+[apps:children]  
+tag_AnsibleGroup_apps  
+[frontends:children]  
+tag_AnsibleGroup_frontends  
+
