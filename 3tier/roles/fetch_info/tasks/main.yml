@@ -1,3 +1,0 @@
----
-# tasks file for fetch_info
-- include_tasks: fetch_info.yml
